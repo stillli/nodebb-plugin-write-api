@@ -23,7 +23,8 @@ module.exports = function(middleware) {
 					content: req.body.content,
 					tags: req.body.tags || [],
 					uid: req.user.uid,
-					timestamp: req.body.timestamp
+					timestamp: req.body.timestamp,
+                	extra: req.body.extra
 				};
 
 			Topics.post(payload, function(err, data) {
